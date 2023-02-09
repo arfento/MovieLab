@@ -7,8 +7,12 @@ import 'package:movie_lab/.api.dart';
 import 'package:http/http.dart' as http;
 import 'package:movie_lab/constants/app.dart';
 import 'package:movie_lab/constants/types.dart';
+import 'package:movie_lab/models/item_models/actor_models/full_actor_model.dart';
+import 'package:movie_lab/models/item_models/show_models/external_sites_model.dart';
+import 'package:movie_lab/models/item_models/show_models/full_show_model.dart';
 import 'package:movie_lab/models/item_models/show_models/show_preview_model.dart';
 import 'package:movie_lab/modules/api/key_getter.dart';
+import 'package:movie_lab/modules/cache/cacheholder.dart';
 import 'package:movie_lab/pages/main/home/home_data_controller.dart';
 
 class APIRequester {
@@ -159,6 +163,80 @@ class APIRequester {
         result.add(ShowPreview.fromJson(json[i]));
       }
       return result;
+    } else {
+      return null;
+    }
+  }
+
+  // Get full details of a show from the IMDB API
+  Future<FullShow?> getShow({required String id}) async {
+    final response = await getUrl(
+      order: "Title",
+      id: id,
+      additionals: "Posters,Images,Trailer,Ratings,",
+    );
+    if (response.statusCode == 200) {
+      var showJson = jsonDecode(response.body);
+      FullShow show = FullShow.fromJson(showJson);
+      return show;
+    } else {
+      return null;
+    }
+  }
+
+  // Get full details of a show from the IMDB API
+  Future<FullActor?> getActor({required String id}) async {
+    final response = await getUrl(
+      order: "Name",
+      id: id,
+    );
+
+    if (response.statusCode == 200) {
+      var actorJson = jsonDecode(response.body);
+      FullActor actor = FullActor.fromJson(actorJson);
+      return actor;
+    } else {
+      return null;
+    }
+  }
+
+  Future<FullShow?> getShowEpisodes(
+      {required dynamic show, required int season}) async {
+    final cacheHolder = CacheHolder();
+    final response = await getUrl(
+      order: "SeasonEpisodes",
+      id: show.id,
+      season: season.toString(),
+    );
+
+    if (response.statusCode == 200) {
+      var json = jsonDecode(response.body)["episodes"];
+      List<ShowPreview> seasonEpisodes = [];
+      for (int i = 0; i < json.length; i++) {
+        seasonEpisodes.add(ShowPreview.fromJson(json[i]));
+      }
+      show.seasons[season - 1] = seasonEpisodes;
+      cacheHolder.saveShowInfoInCache(show: show);
+      if (kDebugMode) {
+        print("Season $season Episodes has been added");
+      }
+      return show;
+    } else {
+      return null;
+    }
+  }
+
+// Get external sites of a show from the IMDB API
+  Future<ExternalSites?> getExternalSites({required String id}) async {
+    final response = await getUrl(
+      order: "ExternalSites",
+      id: id,
+    );
+    if (response.statusCode == 200) {
+      var json = jsonDecode(response.body);
+      late ExternalSites externalSites;
+      externalSites = ExternalSites.fromJson(json);
+      return externalSites;
     } else {
       return null;
     }

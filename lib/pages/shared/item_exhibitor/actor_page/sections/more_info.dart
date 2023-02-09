@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movielab/models/item_models/actor_models/full_actor_model.dart';
-import 'package:movielab/widgets/section_title.dart';
+import 'package:movie_lab/models/item_models/actor_models/full_actor_model.dart';
+import 'package:movie_lab/widgets/section_title.dart';
 
 class ActorPageMoreInfo extends StatelessWidget {
   final FullActor? actor;

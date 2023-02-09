@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movielab/models/item_models/actor_models/full_actor_model.dart';
+import 'package:movie_lab/models/item_models/actor_models/full_actor_model.dart';
 import 'package:share_plus/share_plus.dart';
 
 class ActorPageBottomBar extends StatelessWidget {

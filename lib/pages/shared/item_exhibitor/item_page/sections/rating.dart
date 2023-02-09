@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:movielab/constants/colors.dart';
+import 'package:movie_lab/constants/colors.dart';
 
 class ItemPageRating extends StatelessWidget {
   final String imDbRating;
@@ -23,7 +22,7 @@ class ItemPageRating extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 2, right: 5),
                 child: Text(imDbRating,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: kImdbColor,
                         fontSize: 18,
                         fontWeight: FontWeight.w700)),

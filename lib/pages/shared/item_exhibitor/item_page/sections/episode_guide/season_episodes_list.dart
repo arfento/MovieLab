@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movielab/constants/types.dart';
-import 'package:movielab/pages/shared/item_exhibitor/item_box/expanded_item_box/expanded_item_box.dart';
-import 'package:movielab/widgets/inefficacious_refresh_indicator.dart';
+import 'package:movie_lab/constants/types.dart';
+import 'package:movie_lab/pages/shared/item_exhibitor/item_box/expanded_item_box/expanded_item_box.dart';
+import 'package:movie_lab/widgets/inefficacious_refresh_indicator.dart';
 
 class EpisodeGuideSeasonEpisodes extends StatelessWidget {
   final int season;

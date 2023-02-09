@@ -7,6 +7,7 @@ import 'package:movie_lab/models/hive/hive_adapter/register_adapters.dart';
 import 'package:movie_lab/models/hive/models/actor_preview.dart';
 import 'package:movie_lab/models/hive/models/show_preview.dart';
 import 'package:movie_lab/models/hive/models/user.dart';
+import 'package:movie_lab/modules/cache/cache_data.dart';
 import 'package:movie_lab/pages/main/home/home_data_controller.dart';
 import 'package:movie_lab/pages/main/main_controller.dart';
 import 'package:movie_lab/pages/main/main_page.dart';

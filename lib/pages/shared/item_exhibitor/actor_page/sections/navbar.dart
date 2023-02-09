@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movielab/models/item_models/actor_models/full_actor_model.dart';
+import 'package:movie_lab/models/item_models/actor_models/full_actor_model.dart';
 
 class ActorPageNavBar extends StatefulWidget {
   final FullActor? actor;

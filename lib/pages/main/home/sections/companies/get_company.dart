@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:movie_lab/modules/api/api_requester.dart';
+import 'package:movie_lab/modules/cache/cacheholder.dart';
 
 Future<Map?> getCompanyInfo({required String id}) async {
   Map? company;

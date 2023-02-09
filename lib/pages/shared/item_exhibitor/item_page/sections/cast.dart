@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movielab/pages/shared/item_exhibitor/item_box/actor_box/compressed_actor_box.dart';
-import 'package:movielab/widgets/section_title.dart';
+import 'package:movie_lab/pages/shared/item_exhibitor/item_box/actor_box/compressed_actor_box.dart';
+import 'package:movie_lab/widgets/section_title.dart';
 
 class ItemPageCast extends StatelessWidget {
   final List actorList;

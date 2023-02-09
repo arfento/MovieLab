@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:movielab/constants/colors.dart';
-import 'package:movielab/models/item_models/show_models/external_sites_model.dart';
-import 'package:movielab/models/item_models/show_models/full_show_model.dart';
-import 'package:movielab/modules/api/api_requester.dart';
-import 'package:movielab/widgets/inefficacious_refresh_indicator.dart';
-import 'package:movielab/widgets/section_title.dart';
+import 'package:movie_lab/constants/colors.dart';
+import 'package:movie_lab/models/item_models/show_models/external_sites_model.dart';
+import 'package:movie_lab/models/item_models/show_models/full_show_model.dart';
+import 'package:movie_lab/modules/api/api_requester.dart';
+import 'package:movie_lab/widgets/inefficacious_refresh_indicator.dart';
+import 'package:movie_lab/widgets/section_title.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ItemPageExternalSites extends StatelessWidget {

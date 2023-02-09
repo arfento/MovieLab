@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movielab/constants/colors.dart';
-import 'package:movielab/modules/api/api_requester.dart';
+import 'package:movie_lab/constants/colors.dart';
+import 'package:movie_lab/modules/api/api_requester.dart';
 
 import 'season_page.dart';
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movielab/constants/colors.dart';
-import 'package:movielab/models/item_models/show_models/full_show_model.dart';
-import 'package:movielab/widgets/buttons/glassmorphism_button.dart';
-import 'package:movielab/widgets/section_title.dart';
+import 'package:movie_lab/constants/colors.dart';
+import 'package:movie_lab/models/item_models/show_models/full_show_model.dart';
+import 'package:movie_lab/widgets/buttons/glassmorphism_button.dart';
+import 'package:movie_lab/widgets/section_title.dart';
 
 class ItemPageMedia extends StatelessWidget {
   final List images;

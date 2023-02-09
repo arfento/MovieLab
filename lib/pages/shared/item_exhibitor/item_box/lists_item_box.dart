@@ -7,7 +7,9 @@ import 'package:movie_lab/models/item_models/actor_models/actor_preview_model.da
 import 'package:movie_lab/models/item_models/actor_models/full_actor_model.dart';
 import 'package:movie_lab/models/item_models/show_models/full_show_model.dart';
 import 'package:movie_lab/models/item_models/show_models/show_preview_model.dart';
+import 'package:movie_lab/modules/cache/get_item_info.dart';
 import 'package:movie_lab/modules/preferences/preferences_shareholder.dart';
+import 'package:movie_lab/modules/tools/capitalizer.dart';
 import 'package:movie_lab/pages/shared/item_exhibitor/item_box/actor_box/expanded_actor_box.dart';
 import 'package:movie_lab/widgets/toast.dart';
 import 'expanded_item_box/expanded_item_box.dart';

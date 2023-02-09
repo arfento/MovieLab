@@ -2,10 +2,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movielab/constants/colors.dart';
-import 'package:movielab/models/hive/convertor.dart';
-import 'package:movielab/models/item_models/show_models/full_show_model.dart';
-import 'package:movielab/pages/shared/item_exhibitor/item_popup/show_list_popup_actions.dart';
+import 'package:movie_lab/constants/colors.dart';
+import 'package:movie_lab/models/hive/convertor.dart';
+import 'package:movie_lab/models/item_models/show_models/full_show_model.dart';
+import 'package:movie_lab/pages/shared/item_exhibitor/item_popup/show_list_popup_actions.dart';
 import 'package:share_plus/share_plus.dart';
 
 class ItemPageBottonBar extends StatefulWidget {

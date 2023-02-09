@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movielab/models/item_models/actor_models/full_actor_model.dart';
-import 'package:movielab/models/item_models/show_models/show_preview_model.dart';
-import 'package:movielab/pages/shared/item_exhibitor/item_box/compressed_item_box/compressed_item_box.dart';
-import 'package:movielab/widgets/section_title.dart';
+import 'package:movie_lab/models/item_models/actor_models/full_actor_model.dart';
+import 'package:movie_lab/models/item_models/show_models/show_preview_model.dart';
+import 'package:movie_lab/pages/shared/item_exhibitor/item_box/compressed_item_box/compressed_item_box.dart';
+import 'package:movie_lab/widgets/section_title.dart';
 
 class ActorPageKnownFor extends StatelessWidget {
   final FullActor? actor;
