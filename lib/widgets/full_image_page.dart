@@ -71,14 +71,15 @@ class _FullImagePageState extends State<FullImagePage> {
                             String imageName = widget.imageUrl.replaceFirst(
                                 "https://m.media-amazon.com/images/M/", "");
                             try {
-                              await Share.shareXFiles(
-                                  [XFile('$path/MovieLab/$imageName')]);
+                              await Share.shareFiles(
+                                ['$path/MovieLab/$imageName'],
+                              );
                             } catch (e) {
                               // ignore: use_build_context_synchronously
                               await downloadImage(context,
                                   imageUrl: widget.imageUrl);
-                              await Share.shareXFiles(
-                                  [XFile('$path/MovieLab/$imageName')]);
+                              await Share.shareFiles(
+                                  ['$path/MovieLab/$imageName']);
                             }
                           },
                           icon: const Icon(

@@ -5,6 +5,10 @@ import 'package:movie_lab/constants/colors.dart';
 import 'package:movie_lab/models/hive/models/user.dart';
 import 'package:movie_lab/pages/main/main_controller.dart';
 import 'package:movie_lab/pages/main/profile/profile_controller.dart';
+import 'package:movie_lab/pages/main/profile/user_profile/lists.dart';
+import 'package:movie_lab/pages/main/profile/user_profile/settings.dart';
+import 'package:movie_lab/pages/main/profile/user_profile/socials.dart';
+import 'package:movie_lab/pages/main/profile/user_profile/user_profile.dart';
 import 'package:movie_lab/widgets/inefficacious_refresh_indicator.dart';
 
 class ProfilePage extends StatefulWidget {

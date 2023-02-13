@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:movie_lab/constants/types.dart';
 import 'package:movie_lab/modules/api/api_requester.dart';
-import 'package:movie_lab/modules/cache/cacheholder.dart';
+import 'cacheholder.dart';
 
 Future<dynamic> getItemInfo(
     {required final String id, required final ItemType itemType}) async {
-  dynamic item;
+  dynamic? item;
   final apiRequester = APIRequester();
   final cacheHolder = CacheHolder();
 
@@ -61,4 +61,5 @@ Future<dynamic> getItemInfo(
       }
     }
   });
+  return item;
 }

@@ -4,7 +4,8 @@ import 'package:get/get.dart';
 import 'package:movie_lab/constants/colors.dart';
 import 'package:movie_lab/modules/tools/navigate.dart';
 import 'package:movie_lab/pages/main/main_controller.dart';
-import 'package:movie_lab/pages/shared/app_name.dart';
+import 'package:movie_lab/pages/app_name.dart';
+import 'package:movie_lab/pages/shared/about_page/about_page.dart';
 
 class HomeNavbar extends StatelessWidget {
   const HomeNavbar({Key? key}) : super(key: key);

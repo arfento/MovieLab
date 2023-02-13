@@ -8,6 +8,7 @@ import 'package:movie_lab/models/item_models/show_models/show_preview_model.dart
 import 'package:movie_lab/modules/preferences/preferences_shareholder.dart';
 import 'package:movie_lab/modules/tools/navigate.dart';
 import 'package:movie_lab/pages/main/profile/profile_controller.dart';
+import 'package:movie_lab/pages/main/profile/user_profile/edit_user_profile.dart';
 import 'package:movie_lab/pages/main/profile/user_profile/sections/dividers.dart';
 import 'package:movie_lab/pages/main/profile/user_profile/sections/imdb_rating.dart';
 import 'package:movie_lab/pages/main/profile/user_profile/sections/stats_box.dart';

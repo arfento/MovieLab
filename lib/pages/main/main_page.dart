@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_lab/constants/colors.dart';
 import 'package:movie_lab/pages/main/home/home_page.dart';
+import 'package:movie_lab/pages/main/lists/lists.dart';
 import 'package:movie_lab/pages/main/main_controller.dart';
 import 'package:movie_lab/pages/main/profile/profile.dart';
+import 'package:movie_lab/pages/main/search/search_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -17,7 +19,7 @@ class _MainPageState extends State<MainPage> {
   List<Widget> pages = <Widget>[
     HomePage(),
     SearchPage(),
-    UserListsPage(),
+    UserListPage(),
     ProfilePage()
   ];
 

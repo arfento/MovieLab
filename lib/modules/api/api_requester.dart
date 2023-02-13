@@ -14,6 +14,7 @@ import 'package:movie_lab/models/item_models/show_models/show_preview_model.dart
 import 'package:movie_lab/modules/api/key_getter.dart';
 import 'package:movie_lab/modules/cache/cacheholder.dart';
 import 'package:movie_lab/pages/main/home/home_data_controller.dart';
+import 'package:movie_lab/pages/main/search/search_bar/search_bar_controller.dart';
 
 class APIRequester {
   static const String imdbBaseUrl = 'https://imdb-api.com/en/API';
@@ -239,6 +240,32 @@ class APIRequester {
       return externalSites;
     } else {
       return null;
+    }
+  }
+
+  Future<bool> search({expression, required final String searchType}) async {
+    expression ??= Get.find<SearchBarController>().fieldText;
+    final response = await getUrl(
+      order: searchType,
+      id: expression,
+    );
+
+    if (response.statusCode == 200) {
+      var json = jsonDecode(response.body)["results"];
+      List<ShowPreview> result = [];
+      for (int i = 0; i < json.length; i++) {
+        result.add(ShowPreview.fromJson(json[i]));
+      }
+      if (searchType == "SearchMovie") {
+        Get.find<SearchBarController>().updateResult(movieResult: result);
+      } else if (searchType == "SearchSeries") {
+        Get.find<SearchBarController>().updateResult(seriesResult: result);
+      } else if (searchType == "SearchName") {
+        Get.find<SearchBarController>().updateResult(peopleResult: result);
+      }
+      return true;
+    } else {
+      return false;
     }
   }
 
